@@ -2,16 +2,16 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/AQI/
+    destination: /home/john/ubuntu-home-server/
 hooks:
-  BeforeInstall:
-    - location: scripts/pythonSetup.sh
-      timeout: 60
-      runas: root
-  AfterInstall:
-    - location: scripts/appSetup.sh
-      timeout: 300
-      runas: root
+  # BeforeInstall:
+  #   - location: scripts/pythonSetup.sh
+  #     timeout: 60
+  #     runas: root
+  # AfterInstall:
+  #   - location: scripts/appSetup.sh
+  #     timeout: 300
+  #     runas: root
   ApplicationStart:
     - location: startServer.sh
       timeout: 300
